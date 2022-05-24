@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   const imageUpload = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (image == null) return;
     const imageRef = ref(storage, `images/${image.name + v4()}`);
     uploadBytes(imageRef, image).then((snaphsot) => {
@@ -28,9 +28,7 @@ const Home = () => {
         setImageList((prev) => [...prev, url]);
       });
       alert("image Uploaded");
-      
     });
-  
   };
 
   useEffect(() => {
@@ -56,7 +54,12 @@ const Home = () => {
         <div className="upload"></div>
         <div className="text-center">
           <form onSubmit={imageUpload}>
-            <input type="file" id="uploadImage" onChange={fileSelectedHandler} required />
+            <input
+              type="file"
+              id="uploadImage"
+              onChange={fileSelectedHandler}
+              required
+            />
             <button>Upload</button>
           </form>
         </div>

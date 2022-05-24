@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import img from "../Images/logo.png";
 import { useUserAuth } from "../Context/UserAuthContext";
-// import { async } from '@firebase/util'
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -74,9 +73,10 @@ const Navbar = () => {
                   <Link className="dropdown-item" to="/profile">
                     Edit Profile
                   </Link>
-                  <Link className="dropdown-item" 
-                  onClick={handleLogOut}
-                  to="/login"
+                  <Link
+                    className="dropdown-item"
+                    onClick={handleLogOut}
+                    to="/login"
                   >
                     Log Out
                   </Link>

@@ -9,15 +9,11 @@ import "mdbreact/dist/css/mdb.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { UserAuthContextProvider } from "./Context/UserAuthContext";
 
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
- 
-    <BrowserRouter>
-      <UserAuthContextProvider>
-        <App />
-      </UserAuthContextProvider>
-    </BrowserRouter>
- 
+  <BrowserRouter>
+    <UserAuthContextProvider>
+      <App />
+    </UserAuthContextProvider>
+  </BrowserRouter>
 );
