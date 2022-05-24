@@ -30,17 +30,16 @@ const Home = () => {
       alert("image Uploaded");
     });
   };
-const loadData = () =>{
-  listAll(imageListRef).then((response) => {
-    response.items.forEach((item) => {
-      getDownloadURL(item).then((url) => {
-        setImageList((prev) => [...prev, url]);
+
+  useEffect(() => {
+    listAll(imageListRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageList((prev) => [...prev, url]);
+        });
       });
     });
-  });
-}
-  useEffect(() => {
-    loadData()
+    //eslint-disable-next-line
   }, []);
 
   return (
