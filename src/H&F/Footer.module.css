@@ -1,0 +1,26 @@
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  margin-top: auto;
+  width: 100%;
+   /* padding: 0.75rem; */
+   display: grid;
+   place-content: center;
+   /* position: fixed; */
+   bottom: 0;
+}
+
+.footer a {
+  /* text-decoration: none; */
+  color: white !important;
+ 
+}
+
+.para{
+  font-weight: bold;
+  /* color: white; */
+
+}
